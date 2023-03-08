@@ -24,13 +24,13 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	else
 	{
-		for (; tmp && tmp->next; tmp->next)
+		for (; curr && curr->next; curr = curr->next)
 		{
-			if (tmp->n <= number && tmp->next->n <= number)
+			if (curr->n <= number && curr->next->n <= number)
 				break;
 		}
-		node->next = tmp->next;
-		tmp->next = node;
+		node->next = curr->next;
+		curr->next = node;
 	}
 	return (node);
 }
