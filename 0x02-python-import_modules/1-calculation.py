@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 if __name__ == "__main__":
     """Does some maths and prints the result."""
     from calculator_1 import add, sub, mul, div
