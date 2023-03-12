@@ -4,7 +4,7 @@ In this project, I learnt about Python data structures - Lists and Tuples specif
 
 ## Tests :heavy_check_mark:
 
-* [tests] (./tests): This directory contains testt files.
+* [tests](./tests): This directory contains testt files.
 
 ## Function Prototypes :floppy_disk:
 
