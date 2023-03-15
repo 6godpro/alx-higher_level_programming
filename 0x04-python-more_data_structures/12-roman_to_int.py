@@ -11,10 +11,11 @@ def roman_to_int(roman_string):
         for i, ch in zip(range(len(roman_string)), roman_string):
             if roman_dict.get(ch.upper(), 0) == 0:
                 return 0
-            if ch.upper() in roman_dict:
-                num += roman_dict[ch.upper()]
             if i < len(roman_string) - 1:
                 next_ch = roman_string[i + 1]
-                if roman_dict[ch.upper()] < roman_dict[next_ch.upper()]:
-                    num = -num
+            if i < len(roman_string) - 1 and \
+                    roman_dict[ch.upper()] < roman_dict[next_ch.upper()]:
+                num += -(roman_dict[ch.upper()])
+            else:
+                num += roman_dict[ch.upper()]
     return num
