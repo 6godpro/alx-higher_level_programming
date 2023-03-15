@@ -27,7 +27,6 @@ void print_python_bytes(PyObject *p)
 {
 	PyBytesObject *bytes = ((PyBytesObject *)(p));
 	Py_ssize_t size, i;
-	/*unsigned char bytesize, i; */
 
 	printf("[.] bytes object info\n");
 	if (strcmp(p->ob_type->tp_name, "bytes") != 0)
