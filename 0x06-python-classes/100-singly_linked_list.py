@@ -38,7 +38,6 @@ class Node:
         self.__next_node = value
 
 
-
 class SinglyLinkedList:
     """Represents a singly linked list."""
 
@@ -64,9 +63,10 @@ class SinglyLinkedList:
 
     def __str__(self):
         """Defines the string representation of a SinglyLinkedList"""
-        data = []
         tmp = self.__head
         while tmp is not None:
-            data.append(str(tmp.data))
+            print(tmp.data, end="")
+            if tmp.next_node is not None:
+                print("")
             tmp = tmp.next_node
-        return "\n".join(data)
+        return ""
