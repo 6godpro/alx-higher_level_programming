@@ -5,7 +5,7 @@ and `except`. I also continued to grow my knowledge in Reading Python ByteCode a
 
 ## Tests :heavy_check_mark:
 
-* [tests](./tests): Folder of test files. Provided by Holberton School.
+* [tests](./tests): Folder of test files
 
 ## Function Prototypes :floppy_disk:
 
