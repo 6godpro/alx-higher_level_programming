@@ -1,7 +1,7 @@
 # Python - Exceptions
 
 In this project, I learned handling errors and exceptions in Python with `try`
-and `except`. I also continue to grow my knowledge in Reading Python ByteCode and writing CPython codes.
+and `except`. I also continued to grow my knowledge in Reading Python ByteCode and writing CPython codes.
 
 ## Tests :heavy_check_mark:
 
@@ -95,7 +95,7 @@ Prototypes for functions written in this project:
 
 * **9. ByteCode -> Python #4**
   * [102-magic_calculation.py](./102-magic_calculation.py): Python function matching exactly a
-  bytecode provided by Holberton School.
+  bytecode provided for the task.
 
 * **10. CPython #2: PyFloatObject**
   * [103-python.c](./103-python.c): C functions that print basic information
