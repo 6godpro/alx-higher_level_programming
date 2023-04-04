@@ -1,3 +1,3 @@
+#!/usr/bin/python3
 def copy_list(init_list):
-    new_list = init_list.copy()
-    return (new_list)
+    return (init_list.copy())
