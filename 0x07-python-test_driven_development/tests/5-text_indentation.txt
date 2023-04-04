@@ -1,0 +1,96 @@
+# 5-text_indentation.txt
+
+This module contains a text indentation function ``def text_indentation(text)``
+
+Usage
+=====
+
+``def text_indentation(...)`` prints a text with 2 new lines after each of these
+characters: `.`, `?` and `:`.
+
+**
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+	>>> text_indentation("What is your name?")
+	What is your name?
+	<BLANKLINE>
+
+**
+
+	>>> text_indentation("?")
+	?
+	<BLANKLINE>
+
+**
+
+	>>> text_indentation("?Works:in.this.case:too?")
+	?
+	<BLANKLINE>
+	Works:
+	<BLANKLINE>
+	in.
+	<BLANKLINE>
+	this.
+	<BLANKLINE>
+	case:
+	<BLANKLINE>
+	too?
+	<BLANKLINE>
+
+Text without any of these characters: ., ? and :
+**
+
+	>>> text_indentation("Hello there!")
+	Hello there!
+
+There should be no space at the beginning or end of each printed line.
+**
+
+	>>> text_indentation("Text example: My name is Eric.")
+	Text example:
+	<BLANKLINE>
+	My name is Eric.
+	<BLANKLINE>
+
+**
+
+	>>> text_indentation("    Hello.         There:    ")
+	Hello.
+	<BLANKLINE>
+	There:
+	<BLANKLINE>
+
+**
+
+	>>> text_indentation("                        ")
+
+**
+
+	>>> text_indentation("Hello, world.This is a test")
+	Hello, world.
+	<BLANKLINE>
+	This is a test
+
+**
+
+	>>> text_indentation("?     :       .")
+	?
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+
+Text must be of string type otherwise a TypeError with a message is raised.
+
+**
+
+	>>> text_indentation(12345)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+**
+
+	>>> text_indentation(['Hi', 'there', 'My', 'name', 'is', 'Eric.'])
+	Traceback (most recent call last):
+	TypeError: text must be a string

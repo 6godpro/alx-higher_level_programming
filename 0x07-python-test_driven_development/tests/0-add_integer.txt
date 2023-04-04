@@ -1,0 +1,184 @@
+# 0-add_integer.txt
+
+This module contains an integer addition function ``add_integer(a, b=98)``.
+
+Usage
+=====
+
+``add_integer(...)`` returns the addition of its two arguments.
+
+
+Passing only integer values
+---------------------------
+
+**
+
+	>>> add_integer =  __import__('0-add_integer').add_integer
+	>>> add_integer(2, 3)
+	5
+	>>> add_integer(0, 0)
+	0
+	>>> add_integer(-2, -3)
+	-5
+
+**
+
+Passing only one valid argument
+-------------------------------
+
+**
+
+	>>> add_integer(2)
+	100
+	>>> add_integer(7.0)
+	105
+
+**
+
+Passing only float values
+-------------------------
+Note: float are first converted to ints before the addition is computed.
+
+
+**
+
+	>>> add_integer(20.54, 35.1)
+	55
+	>>> a = 98.0
+	>>> b = 3.14
+	>>> add_integer(a, b)
+	101
+	>>> add_integer(-20.54, 35.1)
+	15
+	>>> add_integer(20.54, -35.1)
+	-15
+
+**
+
+Passing both ints and float values
+----------------------------------
+
+**
+
+	>>> add_integer(10, 10.453)
+	20
+	>>> add_integer(10.543, 10)
+	20
+	>>> add_integer(-45, 45.43)
+	0
+	>>> add_integer(45.32, -90.3)
+	-45
+
+**
+
+Passing non-numbers
+-------------------
+**
+
+	>>> add_integer("a", 1)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+	>>>
+	>>> add_integer(1, "b")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+	>>>
+	>>> add_integer("a", "b")
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+**
+
+	>>> add_integer([1, 2, 3], 4)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+	>>>
+	>>> add_integer(1, [2, 3, 4])
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+**
+
+	>>> add_integer((1, 2, 3), 4)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+	>>>
+	>>> add_integer(1, (2, 3, 4))
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+**
+
+	>>> add_integer({1, 2, 3}, 4)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+	>>>
+	>>> add_integer(1, {2, 3, 4})
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+**
+
+	>>> add_integer({'a': 1, 'b': 2}, 3)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+	>>>
+	>>> add_integer(0, {'a': 1, 'b': 2})
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+**
+
+
+If both arguments are neither int nor float, an TypeError message is printed
+ONLY for the first argument
+
+**
+
+	>>> add_integer("betty", "says hi")
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+**
+
+The function will fail if infinity is provided as argument
+
+**
+
+	>>> add_integer(float('inf'), 2)
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
+	>>> add_integer(2, float('inf'))
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
+
+**
+
+And also if a NaN number is provided
+
+**
+
+	>>> add_integer(float('nan'), 3)
+	Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer
+	>>> add_integer(3, float('nan'))
+	Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer
+
+**

@@ -1,0 +1,53 @@
+# 3-say_my_name.txt
+
+This module defines a name printing function ``def say_my_name(f_name, l_name="")``
+
+Usage
+=====
+
+``def say_my_name(...)`` prints the string passed as arguments, l_name is an
+optional argument and will be ignored if not provided.
+
+
+**
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name("Eric", "Eromosele")
+	My name is Eric Eromosele
+
+**
+
+	>>> say_my_name("Eric")
+	My name is Eric 
+
+**
+
+	>>> say_my_name()
+	Traceback (most recent call last):
+	...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Arguments to the function can only be strings
+
+**
+
+	>>> say_my_name(98, "Eric")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+**
+
+	>>> say_my_name("Eric", 98)
+	Traceback (most recent call last):
+        ...
+        TypeError: last_name must be a string
+
+If non-strings are passed as both arguments, an error is only printed for the first argument
+
+   **
+
+	>>> say_my_name(98, 99)
+	Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string
