@@ -1,2 +1,3 @@
 def copy_list(init_list):
-    return (init_list.copy())
+    new_list = init_list.copy()
+    return (new_list)
