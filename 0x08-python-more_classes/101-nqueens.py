@@ -6,12 +6,12 @@
 def solve(board, col):
     """Utility function to place solve the NQueens puzzle."""
     if col == N:
-        l = []
+        tmp = []
         for r in range(len(board)):
             for c in range(len(board[r])):
                 if board[r][c] == 1:
-                    l.append([r, c])
-        result.append(l)
+                    tmp.append([r, c])
+        result.append(tmp)
 
     for i in range(N):
         if isSafe(board, i, col):
@@ -40,7 +40,7 @@ def isSafe(board, x, y):
 
 
 def main():
-    board = [[0 for i in range (N)] for i in range (N)]
+    board = [[0 for i in range(N)] for i in range(N)]
 
     solve(board, 0)
 
@@ -53,14 +53,15 @@ if __name__ == "__main__":
 
     result = []
     if len(sys.argv) != 2:
-        print("Usage nqueens N")
+        print("Usage: nqueens N")
         sys.exit(1)
 
-    if ord(sys.argv[1]) < 48 or ord(sys.argv[1]) > 57:
-        print("N must be a number")
-        sys.exit(1)
+    for c in sys.argv[1]:
+        if ord(c) < 48 or ord(c) > 57:
+            print("N must be a number")
+            sys.exit(1)
 
-    N = ord(sys.argv[1]) - 48
+    N = int(sys.argv[1])
     if N < 4:
         print("N must be at least 4")
         sys.exit(1)
