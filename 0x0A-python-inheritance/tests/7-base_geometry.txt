@@ -1,0 +1,45 @@
+# 7-base_geometry.txt
+
+This module contains a class BaseGeometry
+
+Usage
+=====
+
+BaseGeometry contains an integer validation method.
+
+**
+
+	>>> bg = __import__('7-base_geometry').BaseGeometry
+	>>> g = bg()
+	>>> print(type(g).__name__)
+	BaseGeometry
+
+**
+
+	>>> isinstance(g, bg)
+	True
+
+**
+
+	>>> g.integer_validator("name", 2)
+	>>> g.integer_validator("age", 89)
+
+**
+
+	>>> g.integer_validator("age", -1)
+	Traceback (most recent call last):
+	ValueError: age must be greater than 0
+
+**
+
+	>>> g.integer_validator("age", 0)
+	Traceback (most recent call last):
+	ValueError: age must be greater than 0
+
+**
+
+	g.integer_validator("name", "zero")
+	Traceback (most recent call last):
+	TypeError: name must be an integer
+
+**
