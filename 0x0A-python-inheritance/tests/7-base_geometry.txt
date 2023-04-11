@@ -5,7 +5,8 @@ This module contains a class BaseGeometry
 Usage
 =====
 
-BaseGeometry contains an integer validation method.
+BaseGeometry contains two methods - a not implemented function `area(self)`
+and `integer_validatot(self, name, value)`.
 
 **
 
@@ -24,6 +25,7 @@ BaseGeometry contains an integer validation method.
 	>>> g.integer_validator("name", 2)
 	>>> g.integer_validator("age", 89)
 
+If the value is <= 0, a ValueError is raised
 **
 
 	>>> g.integer_validator("age", -1)
@@ -36,10 +38,61 @@ BaseGeometry contains an integer validation method.
 	Traceback (most recent call last):
 	ValueError: age must be greater than 0
 
+If value is not an integer, a TypeError is raised
 **
 
-	g.integer_validator("name", "zero")
+	g.integer_validator("string", "1, 2, 3")
 	Traceback (most recent call last):
 	TypeError: name must be an integer
+
+**
+
+	g.integer_validator("list", [1, 2, 3])
+	Traceback (most recent call last):
+	TypeError: name must be an integer
+
+**
+
+	g.integer_validator("set", {1, 2, 3})
+	Traceback (most recent call last):
+	TypeError: name must be an integer
+
+**
+
+	g.integer_validator("tuple", (1, 2, 3))
+	Traceback (most recent call last):
+	TypeError: name must be an integer
+
+**
+
+	g.integer_validator("dict", {'a': 1, 'b': 2, 'c': 3})
+	Traceback (most recent call last):
+	TypeError: name must be an integer
+
+name and value must be supplied to the method integer_validator, otherwise a
+TypeError is raised
+**
+
+	>>> g.integer_validator() # doctest: +NORMALIZE_WHITESPACE
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 2 required positional arguments:			'name' and 'value'
+
+**
+	>>> g.integer_validator("name") # doctest: +NORMALIZE_WHITESPACE
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 1 required positional argument:			'value'
+
+**
+
+	g.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+BaseGeometry takes no argument during instantation
+**
+
+	>>> g = bg(None)
+	Traceback (most recent call last):
+	TypeError: BaseGeometry() takes no arguments
 
 **
