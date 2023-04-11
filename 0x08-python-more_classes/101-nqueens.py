@@ -4,7 +4,7 @@
 
 
 def solve(board, col):
-    """Utility function to place solve the NQueens puzzle."""
+    """Utility function to solve the NQueens puzzle."""
     if col == N:
         tmp = []
         for r in range(len(board)):
@@ -23,7 +23,7 @@ def solve(board, col):
 
 
 def isSafe(board, x, y):
-    """Verifies that a position on the board is safe to place a Queen."""
+    """Verifies that a position (x, y) on the board is safe to place a Queen."""
     for i in range(y):
         if board[x][i] == 1:
             return False
