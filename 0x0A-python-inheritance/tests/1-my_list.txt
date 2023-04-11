@@ -1,0 +1,84 @@
+# 1-my_list.txt
+This module contains an class `MyList` that inherits from the class `list`.
+
+
+Usage
+=====
+
+`MyList` has an method `print_sorted` that prints a list sorted in ascending order
+
+**
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>> a = MyList()
+	>>> isinstance(a, MyList)
+	True
+	>>> isinstance(a, list)
+	True
+	>>> issubclass(MyList, list)
+	True
+
+**
+
+	>>> for i in range(5):
+	...     a.append(i + 1)
+	>>> print(a)
+	[1, 2, 3, 4, 5]
+
+**
+
+	>>> l = [1, 3, 4, 2, 5]
+	>>> MyList.print_sorted(l)
+	[1, 2, 3, 4, 5]
+
+**
+
+	>>> s = {1, 3, 4, 2, 5}
+	>>> MyList.print_sorted(s)
+	[1, 2, 3, 4, 5]
+
+**
+
+	>>> t = (1, 3, 4, 2, 5)
+	>>> MyList.print_sorted(t)
+	[1, 2, 3, 4, 5]
+
+sort values of a dictionary in ascending order.
+**
+
+	>>> d = {'a': 1, 'b': 3, 'c': 4, 'd': 2, 'e': 5}
+	>>> MyList.print_sorted(d.values())
+	[1, 2, 3, 4, 5]
+
+**
+
+	>>> l = MyList()
+	>>> l.append(1)
+	>>> l.append(4)
+	>>> l.append(2)
+	>>> l.append(5)
+	>>> l.append(3)
+	>>> print(l)
+	[1, 4, 2, 5, 3]
+
+**
+
+	>>> l.print_sorted()
+	[1, 2, 3, 4, 5]
+
+The original list is unaltered after print_sorted was invoked.
+
+**
+
+	>>> print(l)
+	[1, 4, 2, 5, 3]
+
+**
+
+	>>> x = l.pop()
+	>>> print(x)
+	3
+	>>> print(l)
+	[1, 4, 2, 5]
+
+**
