@@ -13,7 +13,7 @@ if __name__ == "__main__":
     except OSError:
         items = []
 
-        for i in range(1, len(sys.argv)):
-            items.append(sys.argv[i])
+    for i in range(1, len(sys.argv)):
+        items.append(sys.argv[i])
 
-        save(items, "add_item.json")
+    save(items, "add_item.json")
