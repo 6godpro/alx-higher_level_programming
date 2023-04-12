@@ -81,4 +81,18 @@ The original list is unaltered after print_sorted was invoked.
 	>>> print(l)
 	[1, 4, 2, 5]
 
+Appending negeative values
+**
+
+	>>> l = MyList()
+	>>> for i in range(-1, -6, -1):
+	... 	l.append(i)
+	>>> print(l)
+	[-1, -2, -3, -4, -5]
+
+**
+
+	>>> l.print_sorted()
+	[-5, -4, -3, -2, -1]
+
 **

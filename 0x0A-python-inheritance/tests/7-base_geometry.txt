@@ -70,6 +70,18 @@ If value is not an integer, a TypeError is raised
 	Traceback (most recent call last):
 	TypeError: dict must be an integer
 
+**
+
+	>>> g.integer_validator("bool", True)
+        Traceback (most recent call last):
+        TypeError: bool must be an integer
+
+**
+
+	>>> g.integer_validator("None", None)
+        Traceback (most recent call last):
+        TypeError: None must be an integer
+
 name and value must be supplied to the method integer_validator, otherwise a
 TypeError is raised
 **
