@@ -13,6 +13,7 @@ def print_stat(size, status_codes):
     print("File size: {}".format(size))
     [print(f"{k}: {status_codes[k]}") for k in sorted(status_codes)]
 
+
 if __name__ == "__main__":
     status_code = {}
     count = 0
