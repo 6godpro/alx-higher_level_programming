@@ -126,7 +126,7 @@ class Base:
         try:
             with open(filename) as csvfile:
                 csvreader = csv.DictReader(csvfile)
-                list_dict = [{k : int(v) for k, v in d.items()}
+                list_dict = [{k: int(v) for k, v in d.items()}
                              for d in csvreader]
                 return [cls.create(**d) for d in list_dict]
         except FileNotFoundError:
