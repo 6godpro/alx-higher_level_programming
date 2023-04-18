@@ -61,7 +61,7 @@ class Base:
         filename = cls.__name__ + ".json"
         with open(filename, "w", encoding="utf-8") as f:
             if list_objs is None or list_objs == []:
-                f.write(json.dumps('[]'))
+                f.write(json.dumps([]))
             else:
                 if type(list_objs) is list and \
                    all(isinstance(obj, Base) for obj in list_objs):
@@ -109,8 +109,7 @@ class Base:
 
         with open(cls.__name__ + ".csv", "w", encoding="utf-8") as csvfile:
             if list_objs is None or list_objs == []:
-                csvwriter = csv.writer(csvfile)
-                csvwriter.writerow([''])
+                csvfile.write('[]')
             else:
                 if type(list_objs) is list and \
                    all(isinstance(obj, Base) for obj in list_objs):
