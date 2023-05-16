@@ -14,7 +14,7 @@ then
     echo "-----------------------------------------------------"
     echo "Pushing local changes to remote repository..."
     echo "-----------------------------------------------------"
-    git push origin master
+    git push origin main
     echo "-----------------------------------------------------"
     echo "-----------------------------------------------------"
     echo "Changes successfully pushed to remote repository!"
@@ -33,7 +33,7 @@ git commit -m "Solution for task $task_title"
 echo "-----------------------------------------------------"
 echo "Pushing local changes to remote repository..."
 echo "-----------------------------------------------------"
-git push origin master
+git push origin main
 echo "-----------------------------------------------------"
 echo "-----------------------------------------------------"
 echo "Changes successfully pushed to remote repository!"
