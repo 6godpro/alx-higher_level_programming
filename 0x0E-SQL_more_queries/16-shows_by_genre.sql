@@ -9,5 +9,4 @@ LEFT JOIN tv_show_genres AS tsg
 ON s.id = tsg.show_id
 LEFT JOIN tv_genres AS tg
 ON tsg.genre_id = tg.id
-WHERE tg.name = 'Comedy'
 ORDER BY s.title, tg.name;
