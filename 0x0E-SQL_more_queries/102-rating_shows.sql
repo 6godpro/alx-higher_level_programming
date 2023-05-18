@@ -6,4 +6,4 @@ SELECT s.title, SUM(rate) AS rating
         LEFT JOIN tv_show_ratings AS r
         ON s.id = r.show_id
     GROUP BY s.title
-    ORDER BY rating;
+    ORDER BY rating DESC;
