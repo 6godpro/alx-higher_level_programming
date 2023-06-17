@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """This module contains the class definition of a State."""
 from sqlalchemy import Sequence, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
