@@ -7,9 +7,13 @@ Base = declarative_base()
 
 
 class State(Base):
-    """Represents a state object."""
+    """Represents a State object.
+
+    __tablename__ (string): The name of the table to link to.
+    id (int): The id of the State object.
+    name (string): The name of the State object.
+    """
 
     __tablename__ = 'states'
-
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
