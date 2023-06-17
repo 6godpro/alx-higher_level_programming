@@ -19,7 +19,7 @@ if __name__ == "__main__":
         exit(1)
 
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE `name`='{}' ORDER BY `id`;"
+    cursor.execute("SELECT * FROM states WHERE BINARY `name`='{}';"
                    .format(argv[4]))
     [print(row) for row in cursor.fetchall()]
 
