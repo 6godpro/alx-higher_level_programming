@@ -14,7 +14,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).first()
+    state = session.query(State).filter_by(id=1).one()
     print("{}: {}".format(state.id, state.name))
 
     session.close()
