@@ -14,7 +14,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter_by(id=1).one()
-    print("{}: {}".format(state.id, state.name))
+    try:
+        state = session.query(State).filter_by(id=1).one()
+        print("{}: {}".format(state.id, state.name))
+    except Exception as e:
+        print("Nothing")
 
     session.close()
