@@ -5,6 +5,7 @@
 
 
 def find_peak(arr):
+    """Finds a peak in the given array"""
     size = len(arr)
     if size == 0:
         return None
