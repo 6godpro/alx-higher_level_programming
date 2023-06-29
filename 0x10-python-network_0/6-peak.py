@@ -9,9 +9,13 @@ def find_peak(arr):
     size = len(arr)
     if size == 0:
         return None
-    for i in range(len(arr)):
-        if (i - 1 >= 0 and arr[i] > arr[i - 1]) and \
-                (i + 1 < size and arr[i] > arr[i + 1]):
-            break
+    start, end = 0, len(arr) - 1
+    while start < end:
+        mid = (start + end) // 2
 
-    return arr[i]
+        if (arr[mid] < arr[mid + 1]):
+            start = mid + 1
+        else:
+            end = mid
+
+    return arr[start]
