@@ -3,11 +3,7 @@
     Receives a URL and an email then send a POST request to the URL with
     the email as a parameter, finally displays the body of the response.
 """
-from urllib import (
-    parse,
-    request.Response,
-    request.urlopen
-)
+from urllib import parse, request
 from sys import argv
 
 
