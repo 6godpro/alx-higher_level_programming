@@ -5,7 +5,8 @@
     USAGE: ./3-error_code <URL>
 """
 import sys
-import urllib
+import urllib.error
+import urllib.request
 
 
 if __name__ == "__main__":
