@@ -6,8 +6,7 @@
 
 def find_peak(arr):
     """Finds a peak in the given array"""
-    size = len(arr)
-    if size == 0:
+    if len(arr) == 0:
         return None
     start, end = 0, len(arr) - 1
     while start < end:
@@ -19,11 +18,3 @@ def find_peak(arr):
             end = mid
 
     return arr[start]
-
-
-print(find_peak([1, 2, 4, 6, 3]))
-print(find_peak([4, 2, 1, 2, 3, 1]))
-print(find_peak([2, 2, 2]))
-print(find_peak([]))
-print(find_peak([-2, -4, 2, 1]))
-print(find_peak([4, 2, 1, 2, 2, 2, 3, 1]))
