@@ -8,10 +8,11 @@ import requests
 import sys
 
 
-user, passwd = sys.argv[1:]
-url = "https://api.github.com/user"
-response = requests.get(url, auth=(user, passwd))
-try:
-    print(response.json().get('id'))
-except Exception as e:
-    pass
+if __name__ == "__main__":
+    user, passwd = sys.argv[1:]
+    url = "https://api.github.com/user"
+    response = requests.get(url, auth=(user, passwd))
+    try:
+        print(response.json().get('id'))
+    except Exception as e:
+        pass
