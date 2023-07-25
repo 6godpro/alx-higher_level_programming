@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 const completed = {};
-request.get(`${process.argv[2]}`, (err, res, body) => {
+request.get(process.argv[2], (err, res, body) => {
   err && console.log(err);
   const todos = JSON.parse(body);
   todos.forEach((task) => {
